@@ -8,8 +8,8 @@ namespace CommandoGame.Models
 {
     public class Commando
     {
-        private string Name;
-        private string CodeName { get; set; }
+        protected string Name;
+        protected string CodeName { get; set; }
         public string[] Tools = new string[5];
         public string Status;
 
