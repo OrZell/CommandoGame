@@ -14,6 +14,11 @@ namespace CommandoGame.Models
 
         }
 
+        public void Attack()
+        {
+            Console.WriteLine($"AirCommando CodeName - {this.CodeName} Attacking");
+        }
+
         public void Parachute()
         {
             Console.WriteLine("Parachuting");
