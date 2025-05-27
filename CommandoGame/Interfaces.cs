@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CommandoGame.Models
 {
-    interface IShootable
+    public interface IShootable
     {
         public void Shoot();
         public int Capacity { get; set; }
     }
 
-    interface IBreakable
+    public interface IBreakable
     {
         public string Status { get; set; }
         public int MaxHits { get; set; }
