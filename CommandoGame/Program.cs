@@ -6,11 +6,17 @@ namespace CommandoGame
     {
         public static void Main(string[] args)
         {
-            Commando Soldier = new Commando("Jack", "Jack_Reacher");
-            Soldier.Wlak(); Soldier.Hide(); Soldier.Attack();
+            Commando Soldier = new Commando("Jack Reacher", "Jacky");
+            SeaCommando SeaSoldier = new SeaCommando("Tim Roth", "Timmy");
+            AirCommando AirSoldier = new AirCommando("Jhonthan Miller", "Jhonny");
 
-            Weapon Gun = new Weapon("Glock-17", "Glock", 15);
-            Gun.Shoot();
+            Commando[] Army = new Commando[3];
+            Army[0] = Soldier; Army[1] = SeaSoldier; Army[2] = AirSoldier;
+
+            foreach (Commando item in Army)
+            {
+                item.Attack();
+            }
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandoGame.Models
+﻿namespace CommandoGame.Models
 {
     public class Commando
     {
@@ -32,7 +26,7 @@ namespace CommandoGame.Models
             Console.WriteLine("Hiding");
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"Commando CodeName: {this.CodeName} Attacking");
         }

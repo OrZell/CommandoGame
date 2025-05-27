@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommandoGame.Models;
-
-namespace CommandoGame.Models
+﻿namespace CommandoGame.Models
 {
     public class SeaCommando : Commando
     {
@@ -14,7 +7,7 @@ namespace CommandoGame.Models
 
         }
 
-        public void Attack()
+        public override void Attack()
         {
             Console.WriteLine($"SeaCommando CodeName - {this.CodeName} Attacking");
         }
