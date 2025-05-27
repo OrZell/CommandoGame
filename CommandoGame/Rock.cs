@@ -25,5 +25,31 @@ namespace CommandoGame.Models
             this.MaxHits = 5;
             this.CurrentHit = 0;
         }
+
+        public void Throw()
+        {
+            if (this.Check())
+            {
+                Console.WriteLine("Throw Rck");
+                this.CurrentHit++;
+                if (this.CurrentHit == this.MaxHits-1)
+                {
+                    this.Status = "Broken";
+                }
+            }
+            else
+            {
+                Console.WriteLine("The Rock is Broken");
+            }
+        }
+
+        private bool Check()
+        {
+            if (this.CurrentHit < this.MaxHits)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
