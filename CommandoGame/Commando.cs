@@ -8,8 +8,8 @@ namespace CommandoGame.Models
 {
     public class Commando
     {
-        public string Name;
-        public string Nickname;
+        private string Name;
+        private string Nickname;
         public string[] Tools = new string[5];
         public string Status;
 
@@ -17,6 +17,7 @@ namespace CommandoGame.Models
         {
             this.Name = name;
             this.Nickname = nickname;
+            this.Status = "Stand";
         }
 
         public void Wlak()
@@ -34,6 +35,22 @@ namespace CommandoGame.Models
         public void Attack()
         {
             Console.WriteLine($"Commando Nickname: {this.Nickname} Attacking");
+        }
+
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank == "General")
+            {
+                Console.WriteLine(this.Name);
+            }
+            else if (commanderRank == "Colonel")
+            {
+                Console.WriteLine(this.Nickname);
+            }
+            else
+            {
+                Console.WriteLine("Classified Information");
+            }
         }
     }
 }
