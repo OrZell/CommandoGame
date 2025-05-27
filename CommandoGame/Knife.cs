@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandoGame.Models
 {
-    public class Knife : IBreakable
+    public class Knife : ColdTools, IBreakable
     {
         public string Name;
         public string Kind;
