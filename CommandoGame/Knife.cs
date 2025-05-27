@@ -17,7 +17,7 @@ namespace CommandoGame.Models
         public int MaxHits { get; set; }
         public int CurrentHit { get; set; }
 
-        public Knife(string name, string creator, string color, int weight)
+        public Knife(string name, string creator, string color, int weight, string kind)
         {
             this.Name = name;
             this.Creator = creator;
@@ -26,6 +26,7 @@ namespace CommandoGame.Models
             this.Status = "Complete";
             this.MaxHits = 5;
             this.CurrentHit = 0;
+            this.Kind = kind;
         }
 
         public void Stab()

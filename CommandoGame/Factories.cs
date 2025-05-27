@@ -72,9 +72,9 @@ namespace CommandoGame.Models
             FactoryColdTools.Add(coldtool);
             return coldtool;
         }
-        public ColdTools CreateKnife(string name, string creator, string color, int weight)
+        public ColdTools CreateKnife(string name, string creator, string color, int weight, string kind)
         {
-            ColdTools coldtool = new Knife(name, creator, color, weight);
+            ColdTools coldtool = new Knife(name, creator, color, weight, kind);
             FactoryColdTools.Add(coldtool);
             return coldtool;
         }
