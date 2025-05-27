@@ -9,14 +9,14 @@ namespace CommandoGame.Models
     public class Commando
     {
         private string Name;
-        private string Nickname;
+        private string CodeName { get; set; }
         public string[] Tools = new string[5];
         public string Status;
 
-        public Commando(string name, string nickname)
+        public Commando(string name, string codename)
         {
             this.Name = name;
-            this.Nickname = nickname;
+            this.CodeName = codename;
             this.Status = "Stand";
         }
 
@@ -34,7 +34,7 @@ namespace CommandoGame.Models
 
         public void Attack()
         {
-            Console.WriteLine($"Commando Nickname: {this.Nickname} Attacking");
+            Console.WriteLine($"Commando Nickname: {this.CodeName} Attacking");
         }
 
         public void SayName(string commanderRank)
@@ -45,7 +45,7 @@ namespace CommandoGame.Models
             }
             else if (commanderRank == "Colonel")
             {
-                Console.WriteLine(this.Nickname);
+                Console.WriteLine(this.CodeName);
             }
             else
             {
