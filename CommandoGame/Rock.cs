@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandoGame.Models
 {
-    public class Rock : IBreakable
+    public class Rock : ColdTools, IBreakable
     {
         public string Status { get; set; }
         public int MaxHits { get; set; }
