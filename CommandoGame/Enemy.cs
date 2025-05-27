@@ -8,15 +8,29 @@ namespace CommandoGame.Models
 {
     public class Enemy
     {
-        private string Name;
+        private string _Name;
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+
+        private string _Status;
+        public string Status
+        {
+            get { return _Status; }
+            set { _Status = value; }
+        }
+
         public int Health;
-        private string Status;
+
 
         public Enemy(string name)
         {
-            this.Name = name;
+            this._Name = name;
+            this._Status = "Alive";
             this.Health = 100;
-            this.Status = "Alive";
+
         }
 
         public void Scream()

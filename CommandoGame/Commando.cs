@@ -2,15 +2,27 @@
 {
     public class Commando
     {
-        protected string Name;
-        protected string CodeName { get; set; }
+        private string _Name;
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+
+        private string _CodeName;
+        public string CodeName
+        {
+            get { return _CodeName; }
+            set { _CodeName = value; }
+        }
+
         public string[] Tools = new string[5];
         public string Status;
 
         public Commando(string name, string codename)
         {
-            this.Name = name;
-            this.CodeName = codename;
+            this._Name = name;
+            this._CodeName = codename;
             this.Status = "Stand";
         }
 
