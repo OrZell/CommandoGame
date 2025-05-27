@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,24 @@ namespace CommandoGame.Models
             Weapon weapon = new Weapon(name, creator, capacity);
             FactoryWeapons.Add(weapon);
             return weapon;
+        }
+    }
+
+    public class ColdToolsFactory
+    {
+        public List<ColdTools> FactoryColdTools = new List<ColdTools>();
+
+        public ColdTools CreateStone(string name, string color, int weight)
+        {
+            ColdTools coldtool = new Rock(name, color, weight);
+            FactoryColdTools.Add(coldtool);
+            return coldtool;
+        }
+        public ColdTools CreateKnife(string name, string creator, string color, int weight)
+        {
+            ColdTools coldtool = new Knife(name, creator, color, weight);
+            FactoryColdTools.Add(coldtool);
+            return coldtool;
         }
     }
 }
