@@ -34,7 +34,7 @@ namespace CommandoGame.Models
 
         public void Attack()
         {
-            Console.WriteLine($"Commando Nickname: {this.CodeName} Attacking");
+            Console.WriteLine($"Commando CodeName: {this.CodeName} Attacking");
         }
 
         public void SayName(string commanderRank)
