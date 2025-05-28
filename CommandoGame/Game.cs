@@ -27,9 +27,9 @@
             return enemy;
         }
 
-        public Weapon WeaponCreator(string name, string creator, int capacity)
+        public Weapon WeaponCreator(string name, string creator, int capacity, string type)
         {
-            Weapon weapon = this.weaponFactory.CreateWeapon(name, creator, capacity);
+            Weapon weapon = this.weaponFactory.CreateWeapon(name, creator, capacity, type);
             return weapon;
         }
 
