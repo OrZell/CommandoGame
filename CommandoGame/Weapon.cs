@@ -12,11 +12,5 @@
             this.Creator = creator;
             this.Capacity = capacity;
         }
-
-        public void Shoot()
-        {
-            this.Capacity--;
-            Console.WriteLine("Bang");
-        }
     }
 }
