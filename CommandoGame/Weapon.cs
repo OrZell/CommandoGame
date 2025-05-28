@@ -15,7 +15,7 @@
 
         public bool CheckAbility()
         {
-             return this.Capacity > 0 ? true : false;
+             return this.Capacity > 1 ? true : false;
         }
     }
 }
