@@ -12,5 +12,10 @@
             this.Creator = creator;
             this.Capacity = capacity;
         }
+
+        public bool CheckAbility()
+        {
+             return this.Capacity > 0 ? true : false;
+        }
     }
 }
