@@ -17,6 +17,7 @@
             if (this.CheckAbility())
             {
                 Console.WriteLine("Stab");
+                this.CurrentHit++;
                 this.CheckAndUpadteStatus();
             }
             else
