@@ -1,55 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandoGame.Models
+﻿namespace CommandoGame.Models
 {
-    public class Rock : ColdTools, IBreakable
+    public class Rock : ColdTools
     {
-        public string Status { get; set; }
-        public int MaxHits { get; set; }
-        public int CurrentHit { get; set; }
-
-        public string Name;
-        public int Weight;
-        public string Color;
-
-        public Rock(string name, string color, int weight)
+        public Rock(string name, string color, int weight) : base(name, color, weight)
         {
-            this.Name = name;
-            this.Color = color;
-            this.Weight = weight;
-            this.Status = "Complete";
-            this.MaxHits = 5;
-            this.CurrentHit = 0;
+
         }
 
         public void Throw()
         {
-            if (this.Check())
+            if (this.CheckAbility())
             {
-                Console.WriteLine("Throw Rck");
+                Console.WriteLine("Throw Rock");
                 this.CurrentHit++;
-                if (this.CurrentHit == this.MaxHits-1)
-                {
-                    this.Status = "Broken";
-                }
+                this.CheckAndUpdateStatus();
             }
             else
             {
                 Console.WriteLine("The Rock is Broken");
             }
-        }
-
-        private bool Check()
-        {
-            if (this.CurrentHit < this.MaxHits)
-            {
-                return true;
-            }
-            return false;
         }
     }
 }

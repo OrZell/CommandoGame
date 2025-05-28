@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandoGame.Models
+﻿namespace CommandoGame.Models
 {
     public interface IShootable
     {
@@ -14,7 +8,7 @@ namespace CommandoGame.Models
 
     public interface IBreakable
     {
-        public bool CheckAndUpdateStatus();
-        public void CheckAbility();
+        public void CheckAndUpdateStatus();
+        public bool CheckAbility();
     }
 }
