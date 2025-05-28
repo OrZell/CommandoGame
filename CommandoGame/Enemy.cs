@@ -31,5 +31,17 @@
         {
             Console.WriteLine("I'm Enemy");
         }
+
+        public void CheckHealthAndUpdateStatus()
+        {
+            if (this.Health <= 0 && this.Status == "Alive")
+            {
+                this.Status = "Dead";
+            }
+            else
+            {
+                Console.WriteLine($"The Enemy {this.Name} is Dead");
+            }
+        }
     }
 }
