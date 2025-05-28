@@ -47,9 +47,25 @@
     {
         public List<Weapon> FactoryWeapons = new List<Weapon>();
 
-        public Weapon CreateWeapon(string name, string creator, int capacity)
+        public Weapon CreateWeapon(string name, string creator, int capacity, string type)
         {
-            Weapon weapon = new Weapon(name, creator, capacity);
+            Weapon weapon;
+            switch (type.ToLower())
+            {
+                case "m16":
+                    weapon = new M16(name, creator, capacity);
+                    break;
+
+                case "ak47":
+                    weapon = new AK47(name, creator, capacity);
+                    break;
+
+                default:
+                    Console.WriteLine("Not Type Exist, Creating non type weapon");
+                    weapon = new Weapon(name, creator, capacity);
+                    break;
+            }
+
             FactoryWeapons.Add(weapon);
             return weapon;
         }
